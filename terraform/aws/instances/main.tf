@@ -12,7 +12,7 @@ module "ec2_instance" {
   subnet_ids     = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
   instance_count = 3
 
-  inbound_from_port  = ["0", "6443", "22", "30000"]
+  inbound_from_port  = ["0", "6443", "22", "443",  "30000"]
   inbound_to_port    = ["65000", "6443", "22", "32768"]
   inbound_protocol   = ["TCP", "TCP", "TCP", "TCP"]
   inbound_cidr       = ["172.31.0.0/16", "0.0.0.0/0", "0.0.0.0/0", "0.0.0.0/0"]
